@@ -1,0 +1,40 @@
+[build-system]
+requires = ["setuptools>=77"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "gh-follow-sync"
+version = "0.1.0"
+description = "A safety-focused, one-shot GitHub follower/following synchronizer"
+readme = "README.md"
+license = "MIT"
+license-files = ["LICENSE"]
+requires-python = ">=3.10"
+authors = [{ name = "PW486" }]
+keywords = ["github", "followers", "following", "cli"]
+classifiers = [
+    "Development Status :: 3 - Alpha",
+    "Environment :: Console",
+    "Intended Audience :: Developers",
+    "Operating System :: OS Independent",
+    "Programming Language :: Python :: 3",
+    "Programming Language :: Python :: 3 :: Only",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
+    "Programming Language :: Python :: 3.14",
+    "Topic :: Utilities",
+]
+dependencies = []
+
+[project.scripts]
+gh-follow-sync = "gh_follow_sync.cli:main"
+
+[project.urls]
+Homepage = "https://github.com/PW486/gh-follow-sync"
+Repository = "https://github.com/PW486/gh-follow-sync"
+Issues = "https://github.com/PW486/gh-follow-sync/issues"
+
+[tool.setuptools.packages.find]
+include = ["gh_follow_sync*"]
