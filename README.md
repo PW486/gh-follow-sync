@@ -1,6 +1,7 @@
 # gh-follow-sync
 
 [![tests](https://github.com/PW486/gh-follow-sync/actions/workflows/tests.yml/badge.svg)](https://github.com/PW486/gh-follow-sync/actions/workflows/tests.yml)
+[![release](https://img.shields.io/github/v/release/PW486/gh-follow-sync)](https://github.com/PW486/gh-follow-sync/releases/latest)
 
 A small, one-shot GitHub follow manager:
 
@@ -36,13 +37,27 @@ Before following anyone, the tool asks GitHub's GraphQL API for `viewerCanFollow
 
 Requires Python 3.10+ and has no third-party dependencies.
 
+### From the latest release
+
+The latest release is [v0.1.0](https://github.com/PW486/gh-follow-sync/releases/tag/v0.1.0). This project is not published on PyPI; install the tagged source directly with `pipx`:
+
 ```sh
+pipx install "git+https://github.com/PW486/gh-follow-sync.git@v0.1.0"
+```
+
+Change the tag in the URL to install a different release.
+
+### From source
+
+```sh
+git clone https://github.com/PW486/gh-follow-sync.git
+cd gh-follow-sync
 python3 -m venv .venv
 source .venv/bin/activate
 python -m pip install -e .
 ```
 
-You can also run it without installing:
+You can also run it without installing, from a clone:
 
 ```sh
 python3 -m gh_follow_sync
